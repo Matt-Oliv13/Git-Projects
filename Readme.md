@@ -92,13 +92,15 @@ O comando git push serve para "empurrar" ou enviar as suas alterações locais p
 
     -Envie ao servidor:
     (a) Pela primeira vez: git push -u origin main (isso conecta sua pasta local ao servidor). Atenção! 'main' é o nome padrão da Branch que utilizaremos.
-    (b) Nas próximas vezes: Apenas git push.
+    (b) Nas próximas vezes: Apenas 'git push origin main' ou 'git push'
+
+    OBS: O parâmetro -u (abreviação de --set-upstream) cria um vínculo de rastreamento entre a branch local main e a branch main no repositório remoto origin.Vantagem: Após executá-lo uma primeira vez, o Git "lembra" para onde essa branch deve ir. Nas próximas vezes, você poderá usar apenas git push ou git pull sem precisar especificar o nome do remoto ou da branch.
 
 Já o comando git pull funciona como um "puxar" ou atualizar o seu projeto. Quando você trabalha em equipe ou de diferentes computadores, outras pessoas podem ter enviado alterações para o servidor. Ao executar o pull, o Git busca essas novidades na nuvem e as traz para a sua máquina, tentando mesclá-las (fazer o merge) automaticamente com o que você já tem. É a maneira de garantir que você está trabalhando na versão mais recente do código e evitar conflitos no futuro.
 
     -Receba do servidor:
     (a) git pull origin main;
-    (b) ou apenas git pull
+    (b) ou apenas git pull (se você não trabalha com mais de um repositório)
 
 Em resumo, enquanto o pull mantém você atualizado com o que os outros fizeram, o push atualiza o mundo com o que você criou.
 
