@@ -76,8 +76,25 @@ O comando git commit funciona como a gravação oficial de um "ponto de restaura
 
 ----------------------------------------------------------------------------------
 
+Estabelecimento do vínculo com um Servidor
 
+O comando git remote add origin https://...git serve para conectar o seu repositório local a um servidor na internet, criando um vínculo de comunicação entre o seu computador e o serviço de hospedagem (como o GitHub). Ao executá-lo, você está dizendo ao Git: "A partir de agora, o endereço oficial na nuvem para este projeto será esta URL, e eu vou chamá-la pelo apelido de origin".
 
+    -Criação do Atalho: Em vez de digitar a URL completa sempre que quiser enviar código, você passa a usar apenas o nome origin. Ele funciona como um contato salvo na agenda do seu celular: você clica no nome para não precisar decorar o número.
+    
+    -Preparação para o Envio: Este comando é uma configuração única; ele não envia seus arquivos imediatamente, mas estabelece o caminho necessário para que o comando git push saiba exatamente para onde despachar suas alterações.
+
+----------------------------------------------------------------------------------
+
+Push e Pull
+
+O comando git push serve para "empurrar" ou enviar as suas alterações locais para o servidor remoto. Depois que você terminou uma tarefa, salvou as mudanças e fez o commit (ponto de restauração), você usa o push para disponibilizar essas atualizações para o restante da equipe. 
+
+Já o comando git pull funciona como um "puxar" ou atualizar o seu projeto. Quando você trabalha em equipe ou de diferentes computadores, outras pessoas podem ter enviado alterações para o servidor. Ao executar o pull, o Git busca essas novidades na nuvem e as traz para a sua máquina, tentando mesclá-las (fazer o merge) automaticamente com o que você já tem. É a maneira de garantir que você está trabalhando na versão mais recente do código e evitar conflitos no futuro.
+
+Em resumo, enquanto o pull mantém você atualizado com o que os outros fizeram, o push atualiza o mundo com o que você criou.
+
+----------------------------------------------------------------------------------
 
 
 
