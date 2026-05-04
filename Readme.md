@@ -30,7 +30,25 @@ Criando um Repositório
 
 O comando 'git init' é o ponto de partida de qualquer repositório, sendo o comando responsável por transformar um diretório comum em um projeto monitorado pelo Git. Ao ser executado, ele inicializa um novo repositório através da criação de uma pasta oculta chamada .git, que funciona como o "cérebro" do projeto, armazenando todo o histórico de versões, metadados e configurações de controle. A partir desse momento, o Git cria automaticamente o branch principal (geralmente chamado de main ou master) e permite que você comece a registrar as mudanças nos arquivos. Sem esse comando, o terminal não reconhecerá outros comandos de versão dentro daquela pasta, pois é o git init que estabelece a infraestrutura necessária para o rastreamento de código.
 
-----------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+Branch
+
+No Git, uma branch (ramo), funciona como uma linha do tempo alternativa e isolada do desenvolvimento principal. Ela permite criar novas funcionalidades ou corrigir bugs sem alterar o código estável da branch principal, geralmente chamada de main ou master. As branches facilitam o trabalho paralelo e a experimentação segura.
+
+O comando 'git branch' é a ferramenta utilizada para gerenciar as diferentes linhas de desenvolvimento dentro de um repositório, permitindo que você crie, liste ou exclua ramificações do projeto original.
+    
+    -Isolamento de Tarefas: Ao criar uma nova branch, você gera um ambiente isolado para trabalhar em uma demanda específica; após concluir e testar as alterações, essas linhas podem ser unificadas novamente ao tronco principal.
+    
+    -Gerenciamento do Repositório: O comando permite visualizar todas as ramificações existentes (destacando com um asterisco aquela em que você está no momento), renomear ramos ou deletar aqueles que já cumpriram seu propósito e foram mesclados.
+
+#Nota Importante: 
+-Renomear a branch atual: Se você já estiver na branch que deseja renomear, basta digitar: git branch -m "novo-nome". O parâmetro -m vem de move (ou rename).
+-Renomear outra branch: Caso você queira renomear uma branch na qual não está no momento, use: git branch -m "nome-antigo" "novo-nome".
+
+Repositórios Remotos: Esse comando altera apenas o nome da branch no seu computador local. Se a branch já tiver sido enviada para um servidor (como GitHub ou GitLab), você precisará deletar a branch antiga no remoto e fazer o "push" da nova > Renomeie localmente: git branch -m novo-nome > Delete a antiga no remoto: git push origin --delete nome-antigo > Envie a nova e configure o rastreio: git push origin -u novo-nome.
+
+---------------------------------------------------------------------------------
 
 Staging Area ("Sala de espera local")
 
