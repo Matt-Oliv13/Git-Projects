@@ -1,5 +1,3 @@
-Olá, 
+# Guia Prático de Git
 
-esse foi o meu primeiro conteúdo aqui.
-Através dele comecei a usar o git, adicionando informações à medida que achei necessárias e para me ajudar como um guia prático.
-
+Este repositório reúne minhas anotações iniciais sobre Git, organizadas e reescritas a partir de videoaulas que assisti e complementadas com observações próprias durante meus estudos. O objetivo deste material é servir como um guia prático de consulta, registrando comandos, conceitos e exemplos que me ajudaram a entender melhor o funcionamento do Git no dia a dia.
