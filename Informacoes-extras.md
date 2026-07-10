@@ -49,6 +49,33 @@ Atualmente, o Git recomenda o uso do 'git switch' por ser mais específico para 
 
 Ambos os comandos atualizam seus arquivos locais para a versão da branch escolhida. 
 
+
+Apagar uma branch local (somente se já foi mesclada):
+      
+    git branch -d nome-da-branch
+
+Apagar uma branch local (forçando a exclusão):
+    
+    git branch -D nome-da-branch
+
+Apagar uma branch remota (GitHub):
+   
+    git push origin --delete nome-da-branch
+
+Listar branches locais:
+    
+    git branch
+
+Listar branches remotas (GitHub):
+
+    git branch -r
+
+Listar todas as branches (locais e remotas):
+
+    git branch -a
+
+OBS: não é possível apagar a branch em que você está. Antes, troque para outra branch.
+
 ----------------------------------------------------------------------------------
 
 ## Clone
