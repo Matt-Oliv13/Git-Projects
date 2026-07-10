@@ -1,6 +1,6 @@
 Outros Comandos Importantes!
 
-git status : verifica se a pasta é um repositório Git;
+git status : verifica se é um repositório Git e mostra o estado atual do seu repositório, informando mudanças desde o último commit e o que ocorrerá no próximo;
 
 ls -la : Lista arquivos, incluindo arquivos ocultos (como a pasta .git);
 
