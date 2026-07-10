@@ -38,9 +38,9 @@ Ambos os comandos atualizam seus arquivos locais para a versão da branch escolh
 
 * CLONE
   
-git clone https://github.com/usuario/repositorio.git : clona um repositório usando HTTPS;
+git clone link : clona um repositório usando HTTPS;
 
-git clone git@github.com:usuario/repositorio.git : clona um repositório usando SHH;
+git clone chave:usuario/repositorio.git : clona um repositório usando SHH;
 
 git clone URL novo_nome : clonar alterando o nome da pasta;
 
