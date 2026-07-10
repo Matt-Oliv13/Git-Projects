@@ -9,13 +9,13 @@ O Git Bash é um aplicativo de terminal para Windows. Ele emula o ambiente de li
 
 Comandos iniciais pós-instalação
 
-git config --list : ver todas as configurações
-git config --global user.name : define o nome o usuário
-git config --global user.email : define o email do usuário
+git config --list : ver todas as configurações;
+git config --global user.name : define o nome o usuário;
+git config --global user.email : define o email do usuário;
 OBS:
-    --local   (somente este repositório)   ← maior prioridade
-    --global  (somente seu usuário)
-    --system  (todos os usuários do computador) ← menor prioridade // Normalmente é necessário executar o terminal como administrador para alterá-la. Esse nível é mais usado por administradores de sistemas ou em computadores compartilhados.
+    --local   (somente este repositório)   ← maior prioridade;
+    --global  (somente seu usuário);
+    --system  (todos os usuários do computador) ← menor prioridade // Normalmente é necessário executar o terminal como administrador para alterá-la. Esse nível é mais usado por administradores de sistemas ou em computadores compartilhados;
     
 ---------------------------------------------------------------------------------
 
