@@ -22,13 +22,38 @@ cat : muito usado simplesmente para exibir o conteúdo de arquivos.
       
       ex: cat .git/logs/HEAD : exibe todas as movimentações do HEAD (commits, checkouts, merges etc.);
 
-Exibe a url do repositório no GitHub:
+Exibir a url do repositório no GitHub:
 
       git remote -v
 
-Exibe todas as configurações do git:
+Exibir todas as configurações do git:
  
       git config --list
+
+Restaurar um arquivo modificado para uma versão anterior:
+
+      git restore nomedoarquivo
+
+Remover arquivo da Area de Stage:
+
+      git restore --staged nomedoarquivo
+
+Desfazer um commit:
+- Primeiro, copie a identificação do commit através do comando:
+
+      git log
+
+- Depois, temos três formas de resetar o commit:
+
+      git reset soft : Desfaz o último commit, mantém os arquivos na Stage Area e as alterações na pasta.
+  
+      git reset mixed : Desfaz o commit e remove os arquivos da Staging Area, mas mantém as alterações na pasta.
+  
+      git reset hard : Arquivos voltam exatamente ao estado do commit anterior.
+
+- Para obter um histórico detalhado dessas alterações:
+
+      git reflog 
 
 ----------------------------------------------------------------------------------
 
