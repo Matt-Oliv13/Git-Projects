@@ -1,5 +1,24 @@
 Outros Comandos Importantes!
 
+git status : verifica se a pasta é um repositório Git;
+
+ls -la : Lista arquivos, incluindo arquivos ocultos (como a pasta .git);
+
+cd nomedapasta : Entrar na pasta
+cd .. : voltar
+
+cat : muito usado simplesmente para exibir o conteúdo de arquivos.
+ex: cat .git/config : exibe o conteúdo do arquivo de configurações do repositório.
+ex: cat .git/logs/HEAD : exibe todas as movimentações do HEAD (commits, checkouts, merges etc.);
+
+git remote -v : exibe a url do repositório no GitHub
+
+git config --list : exibe todas as configurações do git
+
+----------------------------------------------------------------------------------
+
+* BRANCHS
+
 O 'git checkout' serve para navegar entre diferentes versões do seu projeto. Para mudar de uma branch para outra, usamos: 
    
     git checkout nome-da-branch 
@@ -16,4 +35,6 @@ Atualmente, o Git recomenda o uso do 'git switch' por ser mais específico para 
 Ambos os comandos atualizam seus arquivos locais para a versão da branch escolhida. 
 
 ----------------------------------------------------------------------------------
+
+
 
