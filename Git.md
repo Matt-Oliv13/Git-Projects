@@ -10,11 +10,17 @@ O Git Bash é um aplicativo de terminal para Windows. Ele emula o ambiente de li
 Comandos iniciais pós-instalação
 
 git config --list : ver todas as configurações;
+
 git config --global user.name : define o nome o usuário;
+
 git config --global user.email : define o email do usuário;
+
 OBS:
-    --local   (somente este repositório)   ← maior prioridade;
+   
+    --local   (somente este repositório)   ← maior prioridade; 
+    
     --global  (somente seu usuário);
+    
     --system  (todos os usuários do computador) ← menor prioridade // Normalmente é necessário executar o terminal como administrador para alterá-la. Esse nível é mais usado por administradores de sistemas ou em computadores compartilhados;
     
 ---------------------------------------------------------------------------------
@@ -24,16 +30,22 @@ Verificação de Caminho
 O comando 'cd' (change directory) é a ferramenta de navegação do terminal. Ele altera o foco do sistema para uma pasta específica para que você possa executar comandos dentro dela. O 'cd' precisa de um Caminho (Path) para saber onde ir. 
 
 -Caminho Relativo: Baseado na sua posição atual.
+
     Exemplo: cd imagens (Entra na pasta que está dentro da atual).
+    
     Exemplo: cd .. (Sobe um nível, voltando para a pasta "pai").
 
 -Caminho Absoluto: O endereço completo desde a raiz do computador.
+
     Exemplo (Windows): cd C:\Users\Nome\Desktop\Projeto.
+    
     Exemplo (Mac/Linux): cd /Users/nome/projeto.
 
 Dicas Práticas:
 -Auto-completar: Digite as primeiras letras do nome da pasta e aperte Tab. Se o terminal preencher o resto, o caminho está correto.
+
 -Arrastar e Soltar: Você pode digitar cd  (com espaço) e arrastar a pasta da sua área de trabalho diretamente para dentro do terminal. Ele escreverá o caminho completo para você.
+
 -Localização Atual: Se estiver perdido, digite pwd no GitBash para ver o caminho completo de onde você está agora.
 
 --------------------------------------------------------------------
@@ -61,7 +73,9 @@ O comando 'git branch' é a ferramenta utilizada para gerenciar as diferentes li
 Repositórios Remotos: Esse comando altera apenas o nome da branch no seu computador local. Se a branch já tiver sido enviada para um servidor (como GitHub ou GitLab), você precisará deletar a branch antiga no remoto e fazer o "push" da nova 
 
     >Renomeie localmente: git branch -m novo-nome 
+    
     >Delete a antiga no remoto: git push origin --delete nome-antigo
+    
     >Envie a nova e configure o rastreio: git push origin -u novo-nome.
 
 ---------------------------------------------------------------------------------
@@ -106,7 +120,9 @@ Push e Pull
 O comando git push serve para "empurrar" ou enviar as suas alterações locais para o servidor remoto. Depois que você terminou uma tarefa, salvou as mudanças e fez o commit (ponto de restauração), você usa o push para disponibilizar essas atualizações para o restante da equipe. 
 
 -Envie ao servidor:
+    
     (a) Pela primeira vez: git push -u origin main (isso conecta sua pasta local ao servidor). Atenção! 'main' é o nome padrão da Branch que utilizaremos.
+    
     (b) Nas próximas vezes: Apenas 'git push origin main' ou 'git push'
 
 OBS: O parâmetro -u (abreviação de --set-upstream) cria um vínculo de rastreamento entre a branch local main e a branch main no repositório remoto origin.Vantagem: Após executá-lo uma primeira vez, o Git "lembra" para onde essa branch deve ir. Nas próximas vezes, você poderá usar apenas git push ou git pull sem precisar especificar o nome do remoto ou da branch.
@@ -114,7 +130,9 @@ OBS: O parâmetro -u (abreviação de --set-upstream) cria um vínculo de rastre
 Já o comando git pull funciona como um "puxar" ou atualizar o seu projeto. Quando você trabalha em equipe ou de diferentes computadores, outras pessoas podem ter enviado alterações para o servidor. Ao executar o pull, o Git busca essas novidades na nuvem e as traz para a sua máquina, tentando mesclá-las (fazer o merge) automaticamente com o que você já tem. É a maneira de garantir que você está trabalhando na versão mais recente do código e evitar conflitos no futuro.
 
 -Receba do servidor:
+   
     (a) git pull origin main;
+    
     (b) ou apenas git pull (se você não trabalha com mais de um repositório)
 
 Em resumo, enquanto o pull mantém você atualizado com o que os outros fizeram, o push atualiza o mundo com o que você criou.
@@ -127,7 +145,9 @@ Uma vez posicionado na branch de destino, execute o comando:
     git merge nome-da-branch-origem
     
 OBS: "origem" é a branch que contém as novas funcionalidades ou correções a serem unidas. Nesse momento, o Git tentará unir as histórias de commit de forma automática, podendo haver dois cenários possíveis:
+  
     (a) a branch de destino não recebeu commits após a criação da branchde origem, permitindo que o Git apenas mescle as duas. 
+   
     (b) a branch de destino e a de origem evoluíram independentemente, exigindo que o Git crie um novo "commit de merge" para selar a união. Caso o Git encontre alterações conflitantes no mesmo trecho de um arquivo, o merge será pausado e você entrará em um estado de conflito. Nessa situação, é necessário abrir os arquivos sinalizados, escolher manualmente qual versão do código deve permanecer, salvar e marcar o conflito como resolvido com git add. Por fim, basta concluir a integração com um git commit (caso o Git não tenha feito automaticamente) e, se desejar que essas mudanças apareçam no servidor, realizar o git push. Após o sucesso da operação, é comum deletar a branch de origem para manter o repositório organizado.
 
 ---------------------------------------------------------------------------------
